@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Form() {
+function Form({ onAddItems }) {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
 
@@ -17,6 +17,8 @@ function Form() {
     console.log(newItem);
 
     // onsubmit of the form, restores all item back to it's default state
+
+    onAddItems(newItem);
     setDescription("");
     setQuantity(1);
   }
