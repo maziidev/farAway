@@ -14,7 +14,7 @@ function Form({ onAddItems }) {
 
     // new item array
     const newItem = { description, quantity, packed: false, id: Date.now() };
-    console.log(newItem);
+    // console.log(newItem);
 
     // onsubmit of the form, restores all item back to it's default state
 

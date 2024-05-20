@@ -1,8 +1,13 @@
 import React from "react";
 
-function Item({ item }) {
+function Item({ item, onDeleteItem, onToggleItems }) {
   return (
     <li>
+      <input
+        type="checkbox"
+        value={item.packed}
+        onChange={() => onToggleItems(item.id)}
+      />
       <span
         style={
           item.packed
@@ -13,7 +18,7 @@ function Item({ item }) {
         <span className="spacer">{item.quantity}</span>
         <span>{item.description}</span>
       </span>
-      <button className="button">X</button>
+      <button onClick={() => onDeleteItem(item.id)}>❌</button>
     </li>
   );
 }
