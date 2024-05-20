@@ -142,3 +142,7 @@ input[type="checkbox"] {
   border-radius: 5px !important;
   width: 10%;
 }
+
+.spacer {
+  margin-right: 5px;
+}

@@ -10,8 +10,8 @@ function Item({ item }) {
             : { textDecoration: "none" }
         }
       >
-        {item.quantity}
-        {item.description}
+        <span className="spacer">{item.quantity}</span>
+        <span>{item.description}</span>
       </span>
       <button className="button">X</button>
     </li>
